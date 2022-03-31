@@ -1,0 +1,9 @@
+@mixin after() {
+  position: absolute;
+  content: "";
+  background: $secondary-color;
+  width: 35px;
+  height: 3px;
+  bottom: 23px;
+  left: 49%;
+}

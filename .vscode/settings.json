@@ -1,0 +1,29 @@
+{
+  "editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.editor.untitled.hint": "hidden",
+  "editor.fontSize": 20,
+  "workbench.colorTheme": "Learn with Sumit - Peace of the eye",
+  "editor.fontLigatures": true,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // live sass compiler settings
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "compressed",
+      "extensionName": ".min.css",
+      "savePath": "/public/css"
+    }
+  ],
+  "liveSassCompile.settings.generateMap": false,
+  "editor.fontFamily": "Fira Code,monospace ",
+  "workbench.iconTheme": "material-icon-theme",
+  "liveServer.settings.donotShowInfoMsg": true
+}

@@ -1,0 +1,30 @@
+// default scss
+@import "./typography";
+@import "./color";
+@import "./image";
+@import "./btn";
+@import "./heading";
+@import "./after";
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  font-family: $hadding-font;
+  font-size: 16px;
+  overflow: visible;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+section {
+  padding: 60px 0;
+}

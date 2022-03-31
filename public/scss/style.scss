@@ -1,0 +1,560 @@
+@import "./partials/default";
+
+// header-section css-start here
+#NavBar {
+  transition: 0.5s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  .logo {
+    width: 3rem;
+    height: auto;
+    img {
+      @include image(100%, auto);
+    }
+  }
+  .nav-list {
+    li {
+      .active {
+        color: $white-color;
+      }
+      a {
+        color: $white-color;
+        font-size: 1.1rem;
+        font-weight: 600;
+        transition: all 0.5s ease-in-out;
+      }
+      &:hover a {
+        color: $dark-color;
+      }
+    }
+  }
+  .search-btn {
+    border: 1px solid $dark-color;
+    outline: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 8px;
+    transition: 0.5s ease;
+    &:hover {
+      background-color: $secondary-color;
+      color: $white-color;
+    }
+  }
+}
+#NavBar.sticky {
+  background: $primary-color;
+}
+
+// header-section css-end here
+
+// hero-section css-start here
+#Hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: rgb(214, 45, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(214, 45, 36, 0.9023984593837535) 0%,
+    rgba(220, 42, 250, 0.9051995798319328) 68%
+  );
+  .hero-aria-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    h1 {
+      color: $gray-color;
+      font-size: 2.7rem;
+    }
+    p {
+      color: $white-color;
+    }
+    a {
+      width: 9.5rem;
+      @include btn(1rem, $white-color);
+    }
+    a:hover {
+      background: $primary-color;
+    }
+  }
+  .hero-img {
+    @include image(100%, 100%);
+  }
+}
+
+// hero-section css-end here
+
+// about-section css-start here
+#About {
+  .heading {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    h1 {
+      @include hadding;
+    }
+    h1::after {
+      @include after;
+    }
+  }
+  .about-left {
+    .about-left-list {
+      i {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: $secondary-color;
+      }
+      span {
+        font-size: 1rem;
+      }
+    }
+  }
+  .about-right {
+    p {
+      font-weight: 300;
+    }
+    a {
+      @include btn(0.6rem, #333);
+      padding: 0.6rem 3.2rem;
+    }
+    a:hover {
+      background: $primary-color;
+      color: $white-color;
+    }
+  }
+}
+// about-section css-end here
+
+/* bottom to top scroll button css here  */
+#scrollTop {
+  position: fixed;
+  background: $primary-color;
+  color: $white-color;
+  font-size: 1.3rem;
+  right: 0.8rem;
+  bottom: 0.8rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  z-index: 999;
+  &:active {
+    background: $secondary-color;
+  }
+}
+
+// why-us-section css-end here
+#why-us {
+  width: 100%;
+  // overflow: hidden;
+  background: $gray-color;
+  .why-us-body {
+    p {
+      font-size: 1rem;
+    }
+    .card-list {
+      flex-direction: row !important;
+      justify-content: space-around;
+      font-size: 1rem;
+      color: $dark-color;
+      transition: 0.5s ease;
+      span,
+      i {
+        font-size: 1.2rem;
+        color: $primary-color !important;
+        vertical-align: middle;
+        margin-right: 0.5rem;
+      }
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+  .why-us-img {
+    img {
+      @include image(100%, 100%);
+    }
+  }
+}
+// why-us-section css-end here
+
+// skill-section css-start here
+#skills {
+  overflow: hidden;
+  .skill-image {
+    img {
+      @include image(100%, 100%);
+    }
+  }
+  .skill-content {
+    h2 {
+      font-size: 2.1rem;
+      color: $dark-color;
+    }
+    p {
+      font-size: 0.9rem;
+    }
+    .progressBar-content {
+      justify-content: space-between;
+      p {
+        font-size: 0.8rem;
+        color: $dark-color;
+      }
+    }
+    .progress {
+      height: 0.8rem;
+    }
+  }
+}
+// skill-section css-end here
+
+// Services-section css-end here
+#Services {
+  background: #f3f5fa;
+  .heading {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    h1 {
+      @include hadding;
+    }
+    h1::after {
+      @include after;
+    }
+  }
+  .services-wapper {
+    .services-card {
+      margin-bottom: 1rem;
+      transition: all ease-in-out 0.4s;
+      box-shadow: 1px 0px 15px;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.1);
+        // transform: translate3d(0px, 10px, 0px);
+      }
+      h5 {
+        margin: auto;
+      }
+      span {
+        font-size: 0.9rem;
+        text-align: center;
+      }
+      .service-icon {
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        i {
+          background: $primary-color;
+          color: $white-color;
+          padding: 0.4rem 0.8rem;
+          font-size: 1.5rem;
+          vertical-align: middle;
+          border-radius: 50%;
+          box-shadow: 0px 7px 10px;
+        }
+      }
+    }
+  }
+}
+// Services-section css-end here
+
+// portfolio-section css-start here
+#Portfolio {
+  background: $gray-color;
+  .heading {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    h1 {
+      @include hadding;
+    }
+    h1::after {
+      @include after;
+    }
+  }
+  .portfolio-menu {
+    cursor: pointer;
+    .active {
+      background: $primary-color;
+      color: $white-color;
+      border-radius: 50px;
+    }
+    li {
+      padding: 0.2rem 1.5rem;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: $dark-color;
+    }
+  }
+  .portfolio-wapper {
+    overflow: hidden;
+    background: $white-color;
+    .portfolio-content {
+      overflow: hidden;
+      .portfolio-single-box {
+        margin: 15px;
+        transition: 1s ease;
+        overflow: hidden;
+        img {
+          @include image(100%, 260px);
+        }
+      }
+    }
+  }
+  .portfolio-content:hover .portfolio-single-box {
+    transform: scale(1.1);
+  }
+}
+// portfolio-section css-end here
+
+// team-section css-start here
+#Team {
+  background: #f3f5fa;
+  .heading {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    h1 {
+      @include hadding;
+    }
+    h1::after {
+      @include after;
+    }
+  }
+  .team-wapper {
+    .team-box {
+      position: relative;
+      padding: 1rem;
+      padding: 10px;
+      .team-member-image {
+        display: flex;
+        width: 100px;
+        height: 90px;
+        margin: auto;
+        img {
+          @include image(100%, 100%);
+          border-radius: 50%;
+        }
+      }
+      .team-member-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .team-member-text {
+          h5 {
+            margin-top: 2.8rem;
+            text-align: center;
+          }
+          span {
+            display: block;
+            text-align: center;
+            margin-bottom: 0.8rem;
+          }
+          p {
+            justify-content: center;
+            text-align: center;
+            font-size: 0.9rem;
+          }
+        }
+        .team-member-link {
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+            rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+          a {
+            i {
+              padding: 0.5rem 0.8rem;
+              // font-size: 1.2rem;
+              border: 1px solid $primary-color;
+              border-radius: 50%;
+              background: $primary-color;
+              color: $white-color;
+              cursor: pointer;
+              transition: all 0.5s;
+            }
+            &:hover i {
+              background: $secondary-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// team-section css-end here
+
+// contact-section css-start here
+#Contact {
+  background: #f3f5fa;
+  .heading {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    h1 {
+      @include hadding;
+    }
+    h1::after {
+      @include after;
+    }
+  }
+  .contact-location {
+    display: flex;
+    i {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      font-size: 1.3rem;
+      height: 30px;
+      margin-right: 0.9rem;
+      background: $primary-color;
+      color: $white-color;
+      border-radius: 100%;
+      padding: 1.4rem 0.7rem;
+    }
+    .contact-content {
+      h2 {
+        font-size: 1.5rem;
+        color: $dark-color;
+        margin-bottom: 0;
+      }
+      p {
+        font-size: 0.9rem;
+        color: $dark-color;
+      }
+    }
+  }
+  .form-btn {
+    @include btn(0.6rem, #333);
+    padding: 0.6rem 2.2rem;
+    transition: 0.5s ease;
+    &:hover {
+      background: $primary-color;
+      color: $white-color;
+    }
+  }
+}
+// contact-section css-end here
+
+// footer-section css-start here
+#Footer {
+  background-color: $primary-color;
+  .footer-link {
+    span {
+      font-size: 0.9rem;
+    }
+    .footer-link-content {
+      .footer-link-list {
+        li {
+          i {
+            color: $secondary-color;
+          }
+          a {
+            color: $white-color;
+            transition: 0.5s ease;
+            &:hover {
+              color: $secondary-color;
+            }
+          }
+        }
+      }
+      .social-icon {
+        display: flex;
+        padding: 1rem;
+        li {
+          background: $secondary-color;
+          margin: 0.5rem;
+          padding: 0.5rem 0.8rem;
+          border: 1px solid $secondary-color;
+          border-radius: 50%;
+          cursor: pointer;
+          transition: 0.5s ease-in;
+          &:hover {
+            background: $primary-color;
+          }
+          a {
+            color: $white-color;
+          }
+        }
+      }
+    }
+  }
+  p {
+    text-align: center;
+    font-size: 0.9rem;
+    color: $dark-color;
+    span {
+      font-size: 1.2rem;
+      color: $white-color;
+    }
+    a {
+      font-size: 1rem;
+      color: $white-color;
+      transition: all 0.5s;
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+}
+// footer-section css-end here
+
+// bootstrap responsive  css
+@media screen and (max-width: 576px) {
+  #Hero {
+    .hero-aria-content {
+      h1 {
+        margin-top: 1rem;
+        font-size: 1.3rem;
+      }
+      p {
+        font-size: 0.9rem;
+        margin: 1.2rem 0;
+      }
+    }
+    .hero-img {
+      flex-direction: column-reverse;
+    }
+    .row {
+      flex-direction: column-reverse;
+    }
+  }
+  #About {
+    .about-left {
+      .about-left-list {
+        span {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+  #why-us {
+    .why-us-body {
+      h2 {
+        font-size: 1.1rem;
+      }
+    }
+  }
+  #skills {
+    .skill-content {
+      h2 {
+        font-size: 1.5rem;
+        font-weight: 400;
+      }
+    }
+  }
+  #Contact {
+    .contact-location i {
+      padding: 1.3rem 0.5rem !important;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  #NavBar {
+    background: $primary-color;
+  }
+}
